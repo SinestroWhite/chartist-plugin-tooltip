@@ -73,8 +73,10 @@
 
             $chart.on('mousemove', function(event) {
                 $toolTip.css({
-                    left: (event.offsetX || event.originalEvent.layerX) - $toolTip.width() / 2 - 10,
-                    top: (event.offsetY || event.originalEvent.layerY) - $toolTip.height() - 40
+                    // left: (event.offsetX || event.originalEvent.layerX) - $toolTip.width() / 2 - 10,
+                    // top: (event.offsetY || event.originalEvent.layerY) - $toolTip.height() - 40
+                    left: event.clientX - $toolTip.width() / 2 - 10, //(event.offsetX || event.originalEvent.layerX) - $toolTip.width() / 2 - 10, // 371
+                    top: event.clientY - $toolTip.height() - 20
                 });
             });
 
